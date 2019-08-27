@@ -1,0 +1,15 @@
+{%extends 'basicapp/base.html'%}
+<!-- {%load staticfiles%} -->
+{%block body_block%}
+  <div class="jumbotron">
+      <h1>Please LogIn</h1>
+      <form method="POST" action={%url 'basicapp:user_login'%} enctype='multipart/form-data'>
+        {%csrf_token%}
+        <label for="username">Username : </label>
+        <input type="text" name="username" placeholder="Enter Username">
+        <label for="password">Password : </label>
+        <input type="password" name="password" placeholder="Enter Password">
+        <input type="submit" class="btn btn-primary" value="LogIn">
+      </form>
+  </div>
+{%endblock%}

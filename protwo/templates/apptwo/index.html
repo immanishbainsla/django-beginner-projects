@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>index page</title>
+  </head>
+  <body>
+    <!-- <h1>{{ helpinsert }}</h1> -->
+    <div class="container">
+      <div class="jumbotron">
+    {% if messages %}
+    {% for message in messages %}
+    <p class="lead">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    
+        <h1>working</h1>
+        <h2>go to /users to sign up</h2>
+      </div>
+    </div>
+  </body>
+</html>
