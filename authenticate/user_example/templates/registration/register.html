@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Registration Page!</h1>
+    {% if form.errors %}
+    <p>There's something wrong with what you Entered! Try again!</p>
+    {% endif %}
+
+    {% if next %}
+    <p>Hey you can't access that Page! Try to Register first!</p>
+    {% endif %}
+
+    <form action="{% url 'register' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Register">
+      <!-- this hidden field is to redirect to the next value it helps the django to redirect -->
+    </form>
+  </body>
+</html>

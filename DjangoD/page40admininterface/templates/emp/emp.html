@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EMP.html</title>
+  </head>
+  <body>
+    <h1>The Employee list is : </h1>
+    {% if emp_  list %}
+      {% for emp in emp_list %}
+        <ul>
+          <li>{{emp.eno}}</li>
+          <li>{{emp.ename}}</li>
+          <li>{{emp.esal}}</li>
+          <li>{{emp.eaddr}}</li>
+        </ul>
+      {% endfor %}
+    {% else %}
+    <h1>Sorry, no records found!!!!!</h1>
+    {% endif %}
+  </body>
+</html>

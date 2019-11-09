@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Index</title>
+  </head>
+  <body>
+    <h1>This is the Index Page.</h1>
+    {% if user.is_authenticated %}
+    <a href="{% url 'user_logout' %}">Logout</a>
+    <h2>Hello {{ user.username }}</h2>
+    {% else %}
+    <a href="{% url 'register' %}">Register</a>
+    <a href="{% url 'login' %}">Login</a>
+    <h2>You are not Logged In!</h2>
+    {% endif %}
+  </body>
+</html>

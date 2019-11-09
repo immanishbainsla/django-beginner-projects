@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First Template Page</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <style >
+      #h11{
+      color:red;
+      }
+      #h12{
+      color:green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello welcome to Second Hero of MVT: Templates</h1>
+    <h1 id=h11>{{insert_msg}}</h1>
+    <h1 id=h12>Current Date and Time : {{insert_date}}</h1>
+    <img src="{% static 'images/default.png' %}" alt="Deosn't Exist" width="300px" height="300px">
+  </body>
+</html>
